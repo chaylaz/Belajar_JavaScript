@@ -78,7 +78,15 @@ console.log(namaPacarku); // ngehapus pacar paling awal alias si Fadhlan, iya bu
 
 console.log(namaPacarku.indexOf("Lin Yi")); //  pacar ke berapa sih beb linyi
 
+namaPacarku = namaPacarku.slice();
+namaPacarku.pop();
+console.log("Nama pacar lamaku :", namaPacarku);
 
+console.log(
+    namaPacarku.reduce(function (acc, pacar, ke) {
+        acc[pacar] = `Pacar ke ${ke + 1}`;
 
-
+        return acc;
+    })
+)
 
